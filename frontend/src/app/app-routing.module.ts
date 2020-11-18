@@ -1,11 +1,13 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { CaseFormComponent } from './case-form/case-form.component';
+import { CasesListComponent } from './cases-list/cases-list.component';
 
 const routes: Routes = [
-  //{ path: '', pathMatch: 'full', redirectTo: '/subjects'},Example Path Default of Router
-  //{path: 'auth', component: AuthComponent}, Example
-  //{path: 'admin', component: AdminComponent, canActivate: [AuthGuard]}, Example
-  //{ path: 'newStudent/:subjectName', component: StudentFormComponent}, //Send param in route
+  { path: '', pathMatch: 'full', redirectTo: 'case/all'},
+  { path: 'case/all', component: CasesListComponent},
+  { path: 'case/add', component: CaseFormComponent},
+  { path: 'case/edit/:name', component: CaseFormComponent}
 ];
 
 @NgModule({

@@ -1,0 +1,80 @@
+<div class="login">
+    <h2 class="login-header">Add Case</h2>
+    <form [formGroup]="caseForm" class="login-container" (ngSubmit)="submitCase()">
+      <input type="name" placeholder="Name*" formControlName="name" />
+      <ng-container
+        *ngIf="!formControls.name.valid &&formControls.name.touched"
+      >
+        <p *ngIf="formControls.name.errors.required">
+          Name is required
+        </p>
+      </ng-container>
+  
+      <input type="date" placeholder="Date*" formControlName="date" />
+      <ng-container
+        *ngIf="!formControls.date.valid &&formControls.date.touched"
+      >
+        <p *ngIf="formControls.date.errors.required">
+          Date is required
+        </p>
+      </ng-container>
+  
+      <input type="dni" placeholder="DNI*" formControlName="dni" />
+      <ng-container
+        *ngIf="!formControls.dni.valid &&formControls.dni.touched"
+      >
+        <p *ngIf="formControls.dni.errors.required">
+          Dni is required
+        </p>
+      </ng-container>
+  
+      <input type="phone" placeholder="Phone*" formControlName="phone" />
+      <ng-container
+      *ngIf="!formControls.phone.valid &&formControls.phone.touched"
+      >
+        <p *ngIf="formControls.phone.errors.required">
+            Phone is required
+        </p>
+      </ng-container>
+
+      <input type="fever" placeholder="Fever (Yes/No)*" formControlName="fever" />
+      <ng-container
+      *ngIf="!formControls.fever.valid &&formControls.fever.touched"
+      >
+        <p *ngIf="formControls.fever.errors.required">
+            Fever is required
+        </p>
+      </ng-container>
+
+      <input type="cough" placeholder="Cough (Yes/No)*" formControlName="cough" />
+      <ng-container
+      *ngIf="!formControls.cough.valid &&formControls.cough.touched"
+      >
+        <p *ngIf="formControls.cough.errors.required">
+           Cough is required
+        </p>
+      </ng-container>
+
+      <input type="breathing_difficulty" placeholder="Breathing Difficulty (Yes/No)*" formControlName="breathing_difficulty" />
+      <ng-container
+      *ngIf="!formControls.breathing_difficulty.valid &&formControls.breathing_difficulty.touched"
+      >
+        <p *ngIf="formControls.breathing_difficulty.errors.required">
+            Breathing Difficulty is required
+        </p>
+      </ng-container>
+
+      <input type="general_discomfort" placeholder="General Discomfort (Yes/No)*" formControlName="general_discomfort" />
+      <ng-container
+      *ngIf="!formControls.general_discomfort.valid &&formControls.general_discomfort.touched"
+      >
+        <p *ngIf="formControls.general_discomfort.errors.required">
+            General Discomfort is required
+        </p>
+      </ng-container>
+  
+      <p>
+        <input type="submit" value="Submit" [disabled]="caseForm.invalid" />
+      </p>
+    </form>
+  </div>

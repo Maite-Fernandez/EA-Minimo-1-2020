@@ -1,0 +1,10 @@
+<div class="case-list-title">
+    <h2>LIST OF CASES:</h2>
+  </div>
+  
+  <div class="cases">
+      <app-case-card *ngFor="let case of cases; index as i"
+        [case]="case" [index]="i">
+      </app-case-card>  
+  
+  </div> 

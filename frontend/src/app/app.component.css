@@ -1,16 +1,28 @@
 .toolbar {
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 60px;
-    display: flex;
-    align-items: center;
-    background-color: #1976d2;
-    color: white;
-    font-size: large;
-    font-weight: 600;
-  }
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+  align-items: center;
+  background-color: #1976d2;
+  color: white;
+  font-size: 20px;
+  font-weight: 600;
+}
 
-  .toolbar img {
-    margin: 0 16px;
-  }
+.toolbar img {
+  margin: 0 16px;
+}
+.center{
+  position: left;
+  margin-left: 800px;
+}
+
+.button{
+  margin-left: 20px;
+  border-radius: 12px;
+  font-size: 12px;
+  background-color: #d21938;
+  color: white;
+
+}
